@@ -8,7 +8,7 @@ function App() {
   const [isActive, setIsActive] = useState(false);
 
   function handleClick() {
-    setIsActive(!isActive);
+    setIsActive((prev) => !prev);
   }
 
   return (
@@ -18,7 +18,7 @@ function App() {
         <h1>Hello React</h1>
         <section>
           <ul>
-            { ways.map(way => <Way title={way.title} description={way.description}/>) }
+            { ways.map(((way, index) => (<Way key={index} title={way.title} description={way.description}/>))) }
           </ul>
         </section>
         <section>

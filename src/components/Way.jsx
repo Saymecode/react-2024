@@ -2,8 +2,8 @@ function Way({ title, description }) {
   return(
     <li>
       <p>
-        <strong>{ title }</strong>
-        { description }
+        <strong>{title}</strong> <br/><br/>
+        {description}
       </p>
     </li>
   )
